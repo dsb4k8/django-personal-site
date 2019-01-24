@@ -13,16 +13,17 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
 	{% if title %}
-		<title>Django Blog - {{title}}</title>
+		<title>Diego's Blog - {{title}}</title>
 	{% else %}
-		<title>Django Blog</title>
+		<title>Diego's Blog - Landing</title>
 	{% endif %}
 </head>
 
 
-<body>
+<!-- style="background-color: {{'#FC9CF9'}}; -->
+<body> 
 	<header class="site-header">
-	  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+	  <nav class="navbar navbar-expand-md navbar-dark bg-info fixed-top">
 	    <div class="container">
 	      <a class="navbar-brand mr-4" href="{%url 'blog-home'%}">Diego's Blog</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,9 +45,11 @@
 	</header>
 	<main role="main" class="container">
 	  <div class="row">
+	  	<!-- This is where the magic happens -->
 	    <div class="col-md-8">
 	      {% block content %}{% endblock %}
 	    </div>
+
 	    <div class="col-md-4">
 	      <div class="content-section">
 	        <h3>Our Sidebar</h3>
@@ -56,7 +59,6 @@
 	            <li class="list-group-item list-group-item-light">Announcements</li>
 	            <li class="list-group-item list-group-item-light">Calendars</li>
 	            <li class="list-group-item list-group-item-light">etc</li>
-	          </ul>
 	        </p>
 	      </div>
 	    </div>
