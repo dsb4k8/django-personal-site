@@ -11,3 +11,9 @@ def home(request):
 
 def about(request):
 	return render(request, 'blog/about.html', {'title': 'About'})
+
+def projects(request):
+	return render(request, 'blog/projects', {'title': 'Projects'})
+
+# def hue(request):
+# 	return render(rewuest, 'blog/')
